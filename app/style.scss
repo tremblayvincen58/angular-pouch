@@ -1,0 +1,141 @@
+@import 'colors';
+
+*:focus {
+    outline: none !important;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.space-top {
+    margin-top: 50px;
+}
+
+.center {
+    text-align: center;
+}
+
+.space-bottom {
+    margin-bottom: 50px;
+}
+
+.spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.cube1, .cube2 {
+    background-color: $green;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+    animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+    background-color: $red;
+}
+
+.cube2 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+@-webkit-keyframes sk-cubemove {
+    25% {
+        -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5)
+    }
+    50% {
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg)
+    }
+    75% {
+        -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5)
+    }
+    100% {
+        -webkit-transform: rotate(-360deg)
+    }
+}
+
+@keyframes sk-cubemove {
+    25% {
+        transform: translateX(42px) rotate(-90deg) scale(0.5);
+        -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    }
+    50% {
+        transform: translateX(42px) translateY(42px) rotate(-179deg);
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+    }
+    50.1% {
+        transform: translateX(42px) translateY(42px) rotate(-180deg);
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+    }
+    75% {
+        transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+        -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    }
+    100% {
+        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Helvetica Neue';
+    background: #1f1f1f;
+    color: white;
+    color: #444444;
+    background: #D3959B; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #D3959B, #BFE6BA); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #D3959B, #BFE6BA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h2, h3 {
+    font-weight: 100;
+}
+
+h2.headline {
+    font-weight: 300 !important;
+    text-transform: uppercase;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.76);
+    margin-left: 15px;
+    float: left;
+    padding: 5px;
+    width: calc(100% - 30px);
+}
+
+.fullwidth {
+    float: left;
+    width: 100%;
+}
+
+.clear-height {
+    min-height: auto;
+}
+
+input, textarea {
+    color: black;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.inner-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+}
